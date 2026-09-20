@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VietQR Widget | Công Cụ Tạo Mã VietQR Miễn Phí Cho Website</title>
+  <meta name="description" content="Tạo mã QR thanh toán ngân hàng Napas247 động miễn phí cho website, hóa đơn và ứng dụng. Không phí duy trì, không cần đăng ký tài khoản.">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://huyhoang2k5.github.io/vietqr-widget/">
+  <meta property="og:title" content="VietQR Widget | Tạo Mã QR Ngân Hàng Miễn Phí 100%">
+  <meta property="og:description" content="Tạo mã VietQR Napas247 động cho website không tốn 1 đồng phí máy chủ hay cổng thanh toán.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="top-nav">
+      <div class="logo">
+        <span class="logo-tag">0đ FREE</span>
+        <strong>VietQR Widget</strong>
+      </div>
+      <div class="nav-links">
+        <a href="https://github.com/huyhoang2k5/vietqr-widget" target="_blank" rel="noreferrer">GitHub Repo ★</a>
+        <a href="https://huyhoang2k5.github.io/solopreneur-kit/" class="btn-sm">Cẩm Nang Solopreneur 2026 →</a>
+      </div>
+    </header>
+
+    <main class="hero-grid">
+      <!-- Left Column: Generator Form -->
+      <section class="config-panel">
+        <div class="panel-header">
+          <h1>Tạo Mã VietQR <span class="gradient-text">Napas247</span> Miễn Phí</h1>
+          <p>Tạo mã QR ngân hàng động nhúng trực tiếp vào website hoặc tải về ảnh PNG không tốn phí duy trì.</p>
+        </div>
+
+        <form id="qr-form" onsubmit="event.preventDefault(); updatePreview();">
+          <div class="form-group">
+            <label for="bank-select">Ngân Hàng Tiếp Nhận</label>
+            <select id="bank-select" onchange="updatePreview()">
+              <option value="tpbank" selected>TPBank (Tiên Phong Bank)</option>
+              <option value="vietcombank">Vietcombank (VCB)</option>
+              <option value="mbbank">MBBank (Quân Đội)</option>
+              <option value="techcombank">Techcombank (TCB)</option>
+              <option value="acb">ACB (Á Châu)</option>
+              <option value="bidv">BIDV</option>
+              <option value="vietinbank">VietinBank</option>
+              <option value="vpbank">VPBank</option>
+              <option value="ocb">OCB</option>
+              <option value="shb">SHB</option>
+              <option value="sacombank">Sacombank</option>
+              <option value="vib">VIB</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="account-input">Số Tài Khoản</label>
+            <input type="text" id="account-input" value="20058999999" placeholder="Nhập số tài khoản..." oninput="updatePreview()" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="amount-input">Số Tiền (VNĐ - Tùy chọn)</label>
+              <input type="number" id="amount-input" value="50000" placeholder="Ví dụ: 50000" oninput="updatePreview()" />
+            </div>
+            <div class="form-group">
+              <label for="template-select">Kiểu Giao Diện</label>
+              <select id="template-select" onchange="updatePreview()">
+                <option value="compact2" selected>Khung Hiện Đại (compact2)</option>
+                <option value="compact">Khung Gọn (compact)</option>
+                <option value="qr_only">Chỉ Mã QR (qr_only)</option>
+                <option value="print">In Ấn Chuẩn (print)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="memo-input">Nội Dung Chuyển Khoản (Memo)</label>
+            <input type="text" id="memo-input" value="DONATE CAFE" placeholder="Ví dụ: DONATE, DONHANG_123" oninput="updatePreview()" />
+          </div>
+        </form>
+
+        <!-- Code Snippet -->
+        <div class="code-box">
+          <div class="code-header">
+            <span>Mã Nhúng Website (HTML)</span>
+            <button class="btn-copy" onclick="copyEmbedCode()">Copy Mã</button>
+          </div>
+          <pre><code id="embed-code">&lt;!-- Nhúng mã VietQR --&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- Right Column: Live Preview & Donation -->
+      <section class="preview-panel">
+        <div class="preview-card">
+          <span class="preview-label">LIVE PREVIEW</span>
+          <div class="qr-display">
+            <img id="qr-img" src="" alt="Mã VietQR Preview" />
+          </div>
+          <div class="preview-actions">
+            <button class="btn btn-primary" onclick="downloadQR()">📥 Tải Ảnh PNG</button>
+            <button class="btn btn-secondary" onclick="copyImageUrl()">🔗 Copy Link Ảnh</button>
+          </div>
+        </div>
+
+        <!-- Donation Callout -->
+        <div class="donation-card">
+          <div class="donation-badge">☕ ỦNG HỘ NHÀ PHÁT TRIỂN</div>
+          <h3>Dự án hoàn toàn miễn phí & mã nguồn mở</h3>
+          <p>Nếu công cụ này giúp ích cho bạn, hãy ủng hộ 1 ly cafe qua mã QR trên để duy trì server nhé!</p>
+          <div class="bank-tag">
+            <span>TPBank: <strong>20058999999</strong></span>
+            <span>Mã gợi ý: <strong>DONATE CAFE</strong></span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  <footer class="footer">
+    <p>Phát triển bởi <strong>huyhoang2k5</strong> · Bản quyền MIT · Tự động hóa kiếm tiền 0đ với <a href="https://huyhoang2k5.github.io/solopreneur-kit/">Solopreneur AI OS</a></p>
+  </footer>
+
+  <script src="vietqr.js"></script>
+  <script>
+    function updatePreview() {
+      const bank = document.getElementById('bank-select').value;
+      const account = document.getElementById('account-input').value.trim();
+      const amount = document.getElementById('amount-input').value.trim();
+      const template = document.getElementById('template-select').value;
+      const memo = document.getElementById('memo-input').value.trim();
+
+      if (!account) return;
+
+      const url = VietQR.getUrl({ bank, account, amount, memo, template });
+      document.getElementById('qr-img').src = url;
+
+      // Update embed code
+      const embed = `<script src="https://huyhoang2k5.github.io/vietqr-widget/vietqr.js"><\/script>\n<div data-vietqr data-bank="${bank}" data-account="${account}" data-amount="${amount}" data-memo="${memo}" data-template="${template}"><\/div>`;
+      document.getElementById('embed-code').innerText = embed;
+    }
+
+    function copyEmbedCode() {
+      const code = document.getElementById('embed-code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Đã copy mã nhúng vào clipboard!');
+      });
+    }
+
+    function copyImageUrl() {
+      const url = document.getElementById('qr-img').src;
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Đã copy link ảnh VietQR!');
+      });
+    }
+
+    function downloadQR() {
+      const url = document.getElementById('qr-img').src;
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'vietqr_payment.png';
+      a.target = '_blank';
+      a.click();
+    }
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', updatePreview);
+  </script>
+</body>
+</html>
