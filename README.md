@@ -45,11 +45,12 @@ console.log(qrUrl);
 
 ---
 
-## ☕ Ủng Hộ Nhà Phát Triển Qua VietQR
+## ☕ Ủng Hộ Nhà Phát Triển (Support & Donate)
 Nếu thư viện này giúp bạn tiết kiệm thời gian hoặc chi phí cổng thanh toán hàng tháng, hãy ủng hộ 1 ly cafe nhé:
-* **Ngân hàng:** **TPBank (Tiên Phong Bank)**
-* **Số tài khoản:** **`20058999999`**
-* **Nội dung:** `DONATE CAFE`
+* **VietQR (TPBank Napas247):** STK **`20058999999`** (LE NGUYEN HOANG HUY) - Nội dung: `DONATE CAFE`
+* **PayPal:** [paypal.me/lnhhoang2k5](https://paypal.me/lnhhoang2k5) (`lnhhoang2k5@gmail.com`)
+* **Web3 / Crypto (Base, ETH, BSC, Polygon):** `0xa57a66df3c7053FDAb5fD1d72040bc0c5b3455F8`
+* **RustChain RTC:** `RTC03434fcb69e1097d553150af5976ef8e4ddf7c41`
 
 ---
 
