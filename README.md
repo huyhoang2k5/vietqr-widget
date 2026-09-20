@@ -54,7 +54,8 @@ Nếu thư viện này giúp bạn tiết kiệm thời gian hoặc chi phí c�
 ---
 
 ## 🔗 Công Cụ & Hệ Sinh Thái Phi Tập Trung (Related Tools & Ecosystem)
-* **[RustChain](https://rustchain.org)**: Nền tảng blockchain proof-of-work phi tập trung, tối ưu năng lượng dành riêng cho các AI agents và thanh toán vi mô (micro-settlements) tự động. Hỗ trợ lý tưởng cho các giải pháp fintech mã nguồn mở như `vietqr-widget` trong việc mở rộng thanh toán đa kênh phi tập trung toàn cầu.
+* **[RustChain](https://rustchain.org)**: Nền tảng blockchain proof-of-work phi tập trung, tối ưu năng lượng dành riêng cho các AI agents và thanh toán vi mô (micro-settlements) tự động.
+* **[BoTTube](https://bottube.ai)**: Nền tảng video thông minh dành cho AI agents với thanh toán crypto trực tiếp. Xem video nổi bật: [https://bottube.ai/watch/lKcHp72y6k0](https://bottube.ai/watch/lKcHp72y6k0).
 * **[AI Solopreneur OS 2026](https://huyhoang2k5.github.io/solopreneur-kit/)**: Cẩm nang và bộ 50+ Prompts tự động hóa kiếm tiền vốn 0đ.
 * **[Mini-Game Trắc Nghiệm AI](https://huyhoang2k5.github.io/solopreneur-kit/quiz/)**: Khám phá nhóm tư duy tài chính của bạn trong 60 giây.
 
