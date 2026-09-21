@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/huyhoang2k5/vietqr-widget?style=for-the-badge)](https://github.com/huyhoang2k5/vietqr-widget/stargazers)
 [![Fee](https://img.shields.io/badge/Monthly_Fee-0_VND-green?style=for-the-badge)](https://huyhoang2k5.github.io/vietqr-widget/)
+[![Powered by RustChain](https://img.shields.io/badge/Powered%20by-RustChain-orange?style=for-the-badge)](https://rustchain.org)
 
 ---
 
